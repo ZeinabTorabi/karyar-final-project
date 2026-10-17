@@ -1,0 +1,968 @@
+:root {
+    --color-bg: #F8FAFC;
+    --color-surface: #FFFFFF;
+    --color-text: #14213D;
+    --color-text-muted: #667085;
+    --color-primary: #0F766E;
+    --color-border: #E5E7EB;
+    --color-border-control: #D0D5DD;
+    --color-accent-bg: #D8F9E9;
+    --color-footer: #14213D;
+    --color-shadow: #E5E7EB;
+    --color-on-primary: #FFFFFF;
+    --color-focus-ring: rgba(15, 118, 110, 0.25);
+    --color-rating: #A16207;
+    --color-accent-bg-hover: #E7FCF2;
+    --color-primary-hover:#10672d;
+    --color-success:#16A34A;
+    --color-danger:#DC2626;
+
+}
+
+
+@font-face {
+    font-family: vazir400;
+    src: url(./fonts/vazirmatn-v33.003/fonts/webfonts/Vazirmatn-Regular.woff2);
+}
+
+@font-face {
+    font-family: vazir600;
+    src: url(./fonts/vazirmatn-v33.003/fonts/webfonts/Vazirmatn-SemiBold.woff2);
+}
+
+@font-face {
+    font-family: vazir700;
+    src: url(./fonts/vazirmatn-v33.003/fonts/webfonts/Vazirmatn-Bold.woff2);
+}
+
+@font-face {
+    font-family: vazir800;
+    src: url(./fonts/vazirmatn-v33.003/fonts/webfonts/Vazirmatn-ExtraBold.woff2);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* برای اینکه فوتر پایین صفحه بمونه */
+    display: flex;
+    flex-direction: column;
+    min-height:100vh;
+    /*  */
+    background-color: var(--color-bg);
+    font-family: vazir400;
+    color: var(--color-text);
+}
+
+/* اینجوری main فضای باقی‌مونده رو می‌گیره و فوتر همیشه ته صفحه می‌مونه */
+main{
+    flex: 1;
+}
+
+/* navbar-------------------------------------------- */
+.navbar {
+    width: 100%;
+    height: 74px;
+    background-color: var(--color-surface);
+    font-size: medium;
+    font-family: vazir400;
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0px 4px 16px var(--color-shadow);
+    /* chasbondan navbar */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+
+}
+
+.navbar__menu {
+    display: flex;
+    gap: 24px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    height: 100%;
+    gap: 24px;
+    padding: 0 24px;
+}
+
+.link {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.link:hover {
+    color: var(--color-primary);
+
+}
+
+.group {
+    color: var(--color-text);
+    text-decoration: none;
+
+}
+
+.loginlink {
+
+    margin-right: auto;
+    gap: 26px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-family: vazir700;
+    font-size: x-large;
+}
+
+.button {
+
+    font-family: vazir400;
+    background-color: var(--color-accent-bg);
+    color: var(--color-primary);
+    border-radius: 13px;
+    border: none;
+    font-size: small;
+    text-align: center;
+    padding: 13px 17px;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--color-accent-bg-hover);
+}
+
+.group:hover {
+    color: var(--color-primary);
+}
+
+
+/* page-header__title---------------------------- */
+
+.page-header {
+    display: flex;
+    flex-direction: column;
+    max-width: 1500px;
+    margin: 40px auto 10px;
+    height: 100%;
+    gap: 24px;
+    padding: 0 24px;
+}
+
+.breadcrumb-link p a {
+    text-decoration: none;
+    font-family: vazir400;
+    font-size: 13px;
+    color: var(--color-text-muted);
+}
+
+.breadcrumb-link p a:hover {
+    color: var(--color-primary);
+}
+
+.page-header__title {
+    font-family: vazir800;
+    font-size: 32px;
+    color: var(--color-text);
+}
+
+.page-header__text {
+    font-family: vazir400;
+    font-size: 13px;
+    color: var(--color-text-muted);
+}
+
+/* sidbar-------------------------------- */
+.filter__title {
+    font-family: vazir700;
+    font-size: 18px;
+    color: var(--color-text);
+    /* خطوط طوسی زیر هر عنوان */
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 16px;
+    margin-bottom: 1px;
+
+
+}
+
+
+.filter__group-title {
+    font-family: vazir600;
+    font-size: 14px;
+    color: var(--color-text);
+
+}
+
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    max-width: 1500px;
+    flex-shrink: 0;
+    gap: 24px;
+    padding: 20px 20px;
+    margin-top: 28px;
+    border-radius: 16px;
+    width: 240px;
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0px 4px 16px var(--color-shadow);
+    position: sticky;
+    top: 96px;
+
+}
+
+
+.filter__option {
+    font-family: vazir400;
+    font-size: 14px;
+    color: var(--color-text-muted);
+    margin: 12px auto;
+
+    /* تنظیمات مستطیل چک باکس */
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+
+}
+
+.filter__option:hover {
+    color: var(--color-text);
+}
+
+
+
+/* باعث مخفی شدن چک باکس میشه */
+input[class="filter__input"] {
+    position: absolute;
+    opacity: 0;
+    height: 1px;
+    width: 1px;
+
+}
+
+/* ظاهر چک باکس  رو به دلخواه تغییر میدیم*/
+.filter__box {
+    height: 20px;
+    width: 20px;
+    border: 2px solid var(--color-border-control);
+    border-radius: 6px;
+    background-color: var(--color-surface);
+    flex-shrink: 0;
+    position: relative;
+}
+
+.filter__box:hover {
+    border-color: var(--color-text-muted);
+}
+
+/* نمایش علامت تیک*/
+.filter__box::after {
+    content: "";
+    display: none;
+    height: 10px;
+    width: 6px;
+    border-right: 2px solid var(--color-surface);
+    border-bottom: 2px solid var(--color-surface);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0px;
+    left: 4px;
+}
+
+/* با کلیک روی متن یا کادر باید سبز بشه و با کلیک دوباره برگرده */
+input:checked+.filter__box {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+
+}
+
+/* نماش علامت تیک */
+input:checked+.filter__box::after {
+    display: block;
+}
+
+input:focus-visible+.filter__box {
+    box-shadow: 0px 0px 0px 3px var(--color-focus-ring);
+
+}
+
+/* محدوده قیمت */
+
+
+.filter__groupp {
+    border-top: 1px solid var(--color-border);
+    padding-top: 13px;
+}
+
+/*رادیو باکس-----------*/
+.filter__box--radio {
+    border-radius: 100%;
+    border-color: var(--color-border-control);
+}
+
+
+
+input:checked+.filter__box--radio {
+    background-color: var(--color-surface);
+}
+
+.filter__box--radio::after {
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    background-color: var(--color-primary);
+    border: 0;
+    transform: none;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+
+/* --------------search bar----------------------------------- */
+
+.catalog {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 45px 24px;
+    gap: 24px;
+    max-width: 1500px;
+
+}
+
+.products {
+    flex: 1;
+    min-width: 0;
+}
+
+.products__search {
+    display: flex;
+    width: 100%;
+    font-family: vazir400;
+    font-size: 15px;
+    color: var(--color-border-control);
+    padding: 13px 13px;
+    margin: 27px 0px;
+    border: 1px solid var(--color-border);
+    border-radius: 15px;
+
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0px 3px 16px var(--color-shadow);
+
+}
+
+.products__search:focus {
+    outline: none;
+    border-color: var(--color-text-muted);
+
+}
+
+.products__bar {
+    display: flex;
+    justify-content: space-between;
+
+    font-family: vazir400;
+    font-size: 14px;
+    color: var(--color-text-muted);
+}
+
+/* ---------------card prouduct-------- */
+
+
+.products__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.products__bar {
+    margin-bottom: 16px;
+}
+
+.product-card {
+    box-shadow: 0px 3px 16px var(--color-shadow);
+    border-radius: 16px;
+
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+
+
+}
+
+.product-card__img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+}
+
+
+
+/* استایل متن محصولات ------------------*/
+.product-card__body {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.product-card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-card__badge{
+    font-family: vazir600;
+    background-color: var(--color-accent-bg);
+    color: var(--color-primary);
+    border-radius: 13px;
+    border: none;
+    align-self: flex-start;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 5px;
+
+
+}
+
+.product-card__title,
+.product-card__price {
+    font-family: vazir700;
+    font-size: 14px;
+    color: var(--color-text);
+    line-height: 1.2;
+}
+
+.product-card__rating {
+    font-family: vazir400;
+    font-size: 14px;
+    color: var(--color-rating);
+}
+
+/* ----footer---------------------- */
+
+.footer_navbar {
+    width: 100%;
+    height: 74px;
+    background-color: var(--color-footer);
+    color:white;
+    font-size: 13px;
+    font-family: vazir400;
+    margin-top: 50px;
+
+
+
+
+}
+
+.container_two {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    height: 100%;
+    gap: 24px;
+    padding: 0 24px;
+    margin: 0 auto;
+}
+
+.titlee {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+
+}
+
+.link-footer {
+    text-decoration: none;
+    color:white;
+}
+
+.link-footer:hover {
+    color: rgba(255, 255, 255, 0.63);
+}
+
+/* respansiv----------------------------------------- */
+
+@media(max-width: 768px) {
+    .products__list {
+        grid-template-columns: 1fr;
+    }
+
+    .filter {
+        display: none;
+    }
+
+    .footer_navbar {
+        height: auto;
+        padding: 24px;
+    }
+
+    .container_two {
+        flex-direction: column;
+        text-align: center;
+        gap: 24px;
+    }
+}
+
+
+@media(max-width: 640px) {
+    .navbar {
+
+        height: auto;
+        padding: 12px;
+    }
+
+    .container {
+        flex-wrap: wrap;
+        row-gap: 12px;
+    }
+
+    .loginlink {
+        order: 2;
+    }
+
+    .navbar__menu {
+        order: 3;
+        gap: 16px;
+        width: 100%;
+        justify-content: center;
+        font-size: 14px;
+        flex-wrap: wrap;
+    }
+
+}
+
+
+
+
+/* @media(max-width: 640px) {
+    .button{
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+
+    .container {
+        gap:8px;
+        padding: 0 12px;
+    }
+    
+    .logo{
+        font-size: 18px;
+    }
+    .loginlink {
+        gap: 8px;
+        font-size: 12px;
+    }
+
+    .navbar__menu {
+        gap:10px;
+        font-size: 12px;
+    }
+
+}
+
+@media(max-width: 480px){
+    .link--extra{
+        display: none;
+    }
+} */
+
+
+/* dark mode------------------- */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-bg: #0F172A;
+        --color-surface: #1E293B;
+        --color-text: #E2E8F0;
+        --color-text-muted: #94A3B8;
+        --color-primary: #2DD4BF;
+        --color-border: #334155;
+        --color-border-control: #475569;
+        --color-accent-bg: #134E4A;
+        --color-footer: #020617;
+        --color-shadow: rgba(0, 0, 0, 0.4);
+        --color-on-primary: #0F172A;
+        --color-focus-ring: rgba(45, 212, 191, 0.35);
+        --color-rating: #FBBF24;
+        --color-accent-bg-hover: #115E59;
+        --color-primary-hover:#5EEAD4;
+        --color-success:#4ADE80;
+         --color-danger:#FB7185;
+    }
+}
+/* product-------------------------------------- */
+/* صفحه امون حالت افقی نگیره */
+img{
+    display: block;
+    max-width: 100%;
+}
+/* محصول ستونی زیر هم نشون داده بشه */
+.product__thumb{
+    
+    width: 72px;
+    height: 72px;
+    
+    cursor: pointer;
+    object-fit:cover;
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+}
+.product__gallery{
+    display: flex;
+    gap: 16px;
+    
+}
+.product__image{
+    flex: 1;
+    min-width: 0;
+    background-color:#FFFFFF;
+    border: 1px solid var(--color-border);
+    border-radius: 24px;
+    overflow: hidden;
+}
+.product__img{
+    height: 400px;
+    object-fit: contain;
+    /* margin-right:auto; */
+    /* border-radius:32px;
+    border: 2px solid var(--color-border); */
+    
+}
+
+.product__thumbs{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.product{
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.product__gallery,.product__info{
+    flex: 1;
+    min-width: 0;
+}
+
+.product__info{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.product__buy{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    margin-top:0;
+}
+
+
+.product__rating{
+    font-family: vazir400;
+    font-size: 13px;
+}
+.product__stars{
+    color: var(--color-rating);
+}
+.product__rating-text{
+    color: var(--color-text-muted);
+}
+.product__description{
+    
+    font-family: vazir400;
+    font-size: 16px;
+    line-height:1.7;
+    color: var(--color-text-muted);
+}
+.product__price{font-family: vazir700;
+    font-size: 18px;
+    color: var(--color-text);}
+
+.product__button{
+    color:#FFFFFF;
+    background-color: var(--color-primary);
+    font-family: vazir600;
+    font-size: 12px;
+    border:none;
+    border-radius: 10px;
+    padding: 12px 12px;
+    cursor: pointer;
+}
+.product__button:hover{
+    background-color: var(--color-primary-hover);
+}
+
+.product__stock{
+    font-family: vazir600;
+    font-size: 13px;
+    color: var(--color-success);
+}
+.reviews__title{
+    margin-bottom:16px;
+}
+.reviews{
+    margin-top: 48px;
+    
+}
+
+.review__header1,.review__header2{
+    display: flex;
+    flex-direction:column;
+    align-content: center;
+    gap: 20px;
+    padding: 16px;
+    border-radius: 16px;
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0px 4px 16px var(--color-shadow);
+   
+
+}
+.review__name{
+    font-family: vazir700;
+    font-size: 16px;
+    font-weight: bold;
+}
+.review__header2{
+  height: 90px;
+  margin-top: 12px;
+}
+.space{
+    font-size: small;
+    margin-right: 16px;
+    color: var(--color-rating);
+}
+.reviw-des{
+    font-family: vazir400;
+    font-size: 14px;
+    color: var(--color-text-muted);
+}
+
+
+
+/* نمایش عکس ها--------------------- */
+/* مخفی کردن radioها */
+.product__radio {
+    display: none;
+    
+}
+
+/* پیش‌فرض: همه عکس‌های بزرگ مخفی */
+.product__img {
+    display: none;
+    width: 100%;
+}
+
+/* نمایش عکس مربوط به radio انتخاب‌شده */
+#gallery-1:checked ~ .product__image .product__img--1,
+#gallery-2:checked ~ .product__image .product__img--2,
+#gallery-3:checked ~ .product__image .product__img--3 {
+    display: block;
+    
+}
+#gallery-1:checked ~ .product__thumbs .product__thumb--1,
+#gallery-2:checked ~ .product__thumbs .product__thumb--2,
+#gallery-3:checked ~ .product__thumbs .product__thumb--3{
+   border: 3px solid var(--color-primary);
+    
+}
+
+.wrapper{
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 24px;
+}
+/* respansive product-------------------- */
+
+@media(max-width: 768px){
+    .product{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .product__gallery{
+        flex-direction: row;
+       
+
+    }
+    .product__img{
+        height: 280px;
+    }
+    .page-header__title{
+        font-size: 24px;
+    }
+}
+
+
+/* page register----------------------------- */
+
+.page{
+    display: flex;
+    justify-content: center;
+    padding:24px 48px;
+    
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    
+    
+}
+.form-card{
+    
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0px 4px 16px var(--color-shadow);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding:24px;
+    
+    max-width: 420px;
+    
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+   margin: 24px 45px;
+   gap: 8px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    align-items:stretch;
+    gap: 8px;
+    
+}
+
+.form-control{
+    width: 100%;
+    border: 1px solid var(--color-border-control);
+    color: var(--color-text);
+    background-color:var(--color-surface);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-family: vazir400;
+    font-size: 14px;
+}
+
+.form-control:not(:placeholder-shown):valid{
+    border-color: var(--color-success);
+}
+.form-control:not(:placeholder-shown):invalid{
+    border-color: var(--color-danger);
+}
+.form-control:focus{
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow:0 0 0 3px var(--color-focus-ring);
+    
+}
+
+.form-title{
+    font-family: vazir700;
+    font-size: 24px;
+    color:var(--color-text);
+    text-align: center;
+}
+
+.form-title-des{
+    text-align: center;
+    font-size: 14px;
+    color: var(--color-text-muted);
+    margin-bottom: 24px;
+}
+.form-label{
+    	font-family: vazir600;
+        font-size: 14px;
+        color:var(--color-text);
+}
+input[placeholder]{
+    text-align: left;
+}
+.form-actions{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    gap: 8px;
+    
+    
+}
+.btn{
+    flex: 1;
+    font-family: vazir600;
+    font-size: 14px;
+    color:var(--color-text);
+    outline: none;
+    padding: 12px 16px;
+    cursor: pointer;
+    border:2px solid var(--color-primary) ;
+    border-radius: 12px;
+}
+.btn-primary{
+    background-color:var(--color-primary);
+    color:var(--color-on-primary) ;
+}	
+
+.btn-secondary{
+    background-color: var(--color-on-primary);
+    color:var(--color-primary);
+    
+}	
+.btn-primary:hover{
+    background-color:var(--color-primary-hover); }	
+
+.btn-secondary:hover{background-color:var(--color-accent-bg-hover)}	
+
+
+/* respansive register-------------------------- */
+@media(max-width:480px){
+    .form-card {
+    width: 100%;
+    max-width: 420px;
+}
+
+.form-container {
+    margin: 24px 0;
+}
+
+.page {
+    padding: 24px 16px;
+}
+}
+
+
+
+
+
+
+
+
+

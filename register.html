@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>ثبت‌نام | بازارینو</title>
+</head>
+
+<body>
+    <header class="navbar">
+        <!-- bakhsh1 -->
+        <div class="container">
+            <a class="logo" href="#">
+                بازارینو
+            </a>
+
+            <!-- bakhsh2 -->
+            <nav class="navbar__menu">
+                <a class="link" href="#">
+                    خانه
+                </a>
+                <a class="link" href="#">
+                    فروشگاه
+                </a>
+                <a class="link" href="#">
+                    دسته بندی ها
+                </a>
+                <a class="link" href="#">
+                    درباره ما
+                </a>
+            </nav>
+
+            <!-- bakhsh3 -->
+            <div class="loginlink">
+                <a class="group button" href="#">
+                    سبد خرید ۲۰
+                </a>
+                <a class="group" href="#">
+                    ورود
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="page">
+            <div class="form-card">
+                <div class="form-container">
+                <h1 class="form-title">ساخت حساب کاربری</h1>
+                <p class="form-title-des">برای خرید سریع تر،حساب بازارینو را بسازید.</p>
+                </div>
+                <form class="form" action="/register" method="post">
+
+                    <div class="form-group">
+                        <label class="form-label" for="email">ایمیل</label>
+                        <input class="form-control" type="email" id="email" name="email"  placeholder="name@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="mobile">شماره همراه</label>
+                        <input class="form-control" type="tel" id="mobile" name="mobile" pattern="09[0-9]{9}" placeholder="۰۹۱۲۳۴۵۶۷۸۹"   required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="password">رمز عبور </label>
+                        <input class="form-control" type="password" id="password" name="password" minlength="8"
+                        maxlength="64" placeholder="حداقل ۸ کاراکتر" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="confirmPassword">تکرار رمز عبور </label>
+                        <input class="form-control" type="password" id="confirmPassword" name="confirmPassword"
+                           minlength="8"
+                           maxlength="64" placeholder="رمز عبور را دوباره وارد کنید"   required>
+                    </div>
+                    <div class="form-actions">
+                        <button class="btn btn-secondary" type="reset">پاک کردن</button>
+                        <button class="btn btn-primary" type="submit">ثبت‌نام</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+
+
+
+
+    <!-- footer----------------------------------- -->
+    <footer class="footer_navbar">
+        <div class="container_two">
+            <span>بازارینو،خرید ساده و مطمئن</span>
+            <div class="titlee">
+                <a class="link-footer" href="#">
+                    پشتیبانی ·
+                </a>
+                <a class="link-footer" href="#">
+                    قوانین و شرایط
+                </a>
+                <a class="link-footer" href="#">
+                    · اینستاگرام
+                </a>
+            </div>
+            <span>© ۱۴۰۵</span>
+        </div>
+    </footer>
+</body>
+
+</html>
