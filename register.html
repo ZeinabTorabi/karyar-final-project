@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta description="با ساخت حساب کاربری در بازارینو، سریع‌تر و راحت‌تر خرید کنید.">
     <link rel="stylesheet" href="./CSS/reset.css">
     <link rel="stylesheet" href="./CSS/style.css">
     <title>ثبت‌نام | بازارینو</title>
@@ -38,7 +39,7 @@
                 <a class="group button" href="#">
                     سبد خرید ۲۰
                 </a>
-                <a class="group" href="#">
+                <a class="group" href="./register.html">
                     ورود
                 </a>
             </div>
@@ -50,30 +51,31 @@
         <div class="page">
             <div class="form-card">
                 <div class="form-container">
-                <h1 class="form-title">ساخت حساب کاربری</h1>
-                <p class="form-title-des">برای خرید سریع تر،حساب بازارینو را بسازید.</p>
+                    <h1 class="form-title">ساخت حساب کاربری</h1>
+                    <p class="form-title-des">برای خرید سریع تر،حساب بازارینو را بسازید.</p>
                 </div>
                 <form class="form" action="/register" method="post">
 
                     <div class="form-group">
                         <label class="form-label" for="email">ایمیل</label>
-                        <input class="form-control" type="email" id="email" name="email"  placeholder="name@example.com" required>
+                        <input class="form-control" type="email" id="email" name="email" placeholder="name@example.com"
+                            required>
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="mobile">شماره همراه</label>
-                        <input class="form-control" type="tel" id="mobile" name="mobile" pattern="09[0-9]{9}" placeholder="۰۹۱۲۳۴۵۶۷۸۹"   required>
+                        <input class="form-control" type="tel" id="mobile" name="mobile" pattern="09[0-9]{9}"
+                            placeholder="09123456789" required>
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="password">رمز عبور </label>
                         <input class="form-control" type="password" id="password" name="password" minlength="8"
-                        maxlength="64" placeholder="حداقل ۸ کاراکتر" required>
+                            maxlength="64" placeholder="حداقل ۸ کاراکتر" required>
                     </div>
 
                     <div class="form-group">
                         <label class="form-label" for="confirmPassword">تکرار رمز عبور </label>
                         <input class="form-control" type="password" id="confirmPassword" name="confirmPassword"
-                           minlength="8"
-                           maxlength="64" placeholder="رمز عبور را دوباره وارد کنید"   required>
+                            minlength="8" maxlength="64" placeholder="رمز عبور را دوباره وارد کنید" required>
                     </div>
                     <div class="form-actions">
                         <button class="btn btn-secondary" type="reset">پاک کردن</button>
