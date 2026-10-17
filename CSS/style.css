@@ -385,7 +385,9 @@ input:checked+.filter__box--radio {
 
 /* ---------------card product-------- */
 
-
+.link-a{
+    text-decoration: none;
+}
 .products__list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
