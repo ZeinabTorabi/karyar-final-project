@@ -1,0 +1,153 @@
+/* Registration page */
+/* page register----------------------------- */
+
+.page {
+    display: flex;
+    justify-content: center;
+    padding: 24px 48px;
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+
+}
+
+.form-card {
+
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0px 4px 16px var(--color-shadow);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 24px;
+
+    max-width: 420px;
+
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 24px 45px;
+    gap: 8px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+
+}
+
+.form-control {
+    width: 100%;
+    border: 1px solid var(--color-border-control);
+    color: var(--color-text);
+    background-color: var(--color-surface);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-family: vazir400;
+    font-size: 14px;
+}
+
+.form-control:not(:placeholder-shown):valid {
+    border-color: var(--color-success);
+}
+
+.form-control:not(:placeholder-shown):invalid {
+    border-color: var(--color-danger);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px var(--color-focus-ring);
+
+}
+
+.form-title {
+    font-family: vazir700;
+    font-size: 24px;
+    color: var(--color-text);
+    text-align: center;
+}
+
+.form-title-des {
+    text-align: center;
+    font-size: 14px;
+    color: var(--color-text-muted);
+    margin-bottom: 24px;
+}
+
+.form-label {
+    font-family: vazir600;
+    font-size: 14px;
+    color: var(--color-text);
+}
+
+.form-control::placeholder {
+    text-align: left;
+}
+
+.form-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+
+
+}
+
+.btn {
+    flex: 1;
+    font-family: vazir600;
+    font-size: 14px;
+    color: var(--color-text);
+    outline: none;
+    padding: 12px 16px;
+    cursor: pointer;
+    border: 2px solid var(--color-primary);
+    border-radius: 12px;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+}
+
+.btn-secondary {
+    background-color: var(--color-on-primary);
+    color: var(--color-primary);
+
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-accent-bg-hover)
+}
+
+
+/* Responsive register-------------------------- */
+@media(max-width:480px) {
+    .form-card {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .form-container {
+        margin: 24px 0;
+    }
+
+    .page {
+        padding: 24px 16px;
+    }
+}

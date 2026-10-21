@@ -1,0 +1,289 @@
+:root {
+    --color-bg: #F8FAFC;
+    --color-surface: #FFFFFF;
+    --color-text: #14213D;
+    --color-text-muted: #667085;
+    --color-primary: #0F766E;
+    --color-border: #E5E7EB;
+    --color-border-control: #D0D5DD;
+    --color-accent-bg: #D8F9E9;
+    --color-footer: #14213D;
+    --color-shadow: #E5E7EB;
+    --color-on-primary: #FFFFFF;
+    --color-focus-ring: rgba(15, 118, 110, 0.25);
+    --color-rating: #A16207;
+    --color-accent-bg-hover: #E7FCF2;
+    --color-primary-hover: #10672d;
+    --color-success: #16A34A;
+    --color-danger: #DC2626;
+
+}
+
+
+@font-face {
+    font-family: vazir400;
+    src: url(./fonts/vazirmatn-v33.003/fonts/webfonts/Vazirmatn-Regular.woff2);
+    font-display: swap
+}
+
+@font-face {
+    font-family: vazir600;
+    src: url(./fonts/vazirmatn-v33.003/fonts/webfonts/Vazirmatn-SemiBold.woff2);
+    font-display: swap
+}
+
+@font-face {
+    font-family: vazir700;
+    src: url(./fonts/vazirmatn-v33.003/fonts/webfonts/Vazirmatn-Bold.woff2);
+    font-display: swap
+}
+
+@font-face {
+    font-family: vazir800;
+    src: url(./fonts/vazirmatn-v33.003/fonts/webfonts/Vazirmatn-ExtraBold.woff2);
+    font-display: swap
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-bg);
+    font-family: vazir400;
+    color: var(--color-text);
+}
+
+
+/* هدر سایت-------------------------------------------- */
+.navbar {
+    width: 100%;
+    height: 74px;
+    background-color: var(--color-surface);
+    font-size: medium;
+    font-family: vazir400;
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0px 4px 16px var(--color-shadow);
+    /* chasbondan navbar */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+
+}
+
+.navbar__menu {
+    display: flex;
+    gap: 24px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    height: 100%;
+    gap: 24px;
+    padding: 0 24px;
+}
+
+.link {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.link:hover {
+    color: var(--color-primary);
+
+}
+
+.group {
+    color: var(--color-text);
+    text-decoration: none;
+
+}
+
+.loginlink {
+
+    margin-right: auto;
+    gap: 26px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-family: vazir700;
+    font-size: x-large;
+}
+
+.button {
+
+    font-family: vazir400;
+    background-color: var(--color-accent-bg);
+    color: var(--color-primary);
+    border-radius: 13px;
+    border: none;
+    font-size: small;
+    text-align: center;
+    padding: 13px 17px;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--color-accent-bg-hover);
+}
+
+.group:hover {
+    color: var(--color-primary);
+}
+
+
+/* page-header__title---------------------------- */
+
+.page-header {
+    display: flex;
+    flex-direction: column;
+    max-width: 1500px;
+    margin: 40px auto 10px;
+    height: 100%;
+    gap: 24px;
+    padding: 0 24px;
+}
+
+.breadcrumb-link p a {
+    text-decoration: none;
+    font-family: vazir400;
+    font-size: 13px;
+    color: var(--color-text-muted);
+}
+
+.breadcrumb-link p a:hover {
+    color: var(--color-primary);
+}
+
+.page-header__title {
+    font-family: vazir800;
+    font-size: 32px;
+    color: var(--color-text);
+}
+
+.page-header__text {
+    font-family: vazir400;
+    font-size: 13px;
+    color: var(--color-text-muted);
+}
+
+
+/* Footer */
+
+.footer_navbar {
+    width: 100%;
+    height: 74px;
+    background-color: var(--color-footer);
+    color: white;
+    font-size: 13px;
+    font-family: vazir400;
+    margin-top: 50px;
+}
+
+.container_two {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    height: 100%;
+    gap: 24px;
+    padding: 0 24px;
+    margin: 0 auto;
+}
+
+.titlee {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link-footer {
+    text-decoration: none;
+    color: white;
+}
+
+.link-footer:hover {
+    color: rgba(255, 255, 255, 0.63);
+}
+
+/* Responsive----------------------------------------- */
+
+@media(max-width: 768px) {
+    .footer_navbar {
+        height: auto;
+        padding: 24px;
+    }
+
+    .container_two {
+        flex-direction: column;
+        text-align: center;
+        gap: 24px;
+    }
+}
+
+@media(max-width: 640px) {
+    .navbar {
+        height: auto;
+        padding: 12px;
+    }
+
+    .container {
+        flex-wrap: wrap;
+        row-gap:15px;
+    }
+
+    .loginlink {
+        order: 2;
+    }
+
+    .navbar__menu {
+        order: 3;
+        gap: 16px;
+        width: 100%;
+        justify-content: center;
+        font-size: 14px;
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* dark mode------------------- */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-bg: #0F172A;
+        --color-surface: #1E293B;
+        --color-text: #E2E8F0;
+        --color-text-muted: #94A3B8;
+        --color-primary: #2DD4BF;
+        --color-border: #334155;
+        --color-border-control: #475569;
+        --color-accent-bg: #134E4A;
+        --color-footer: #020617;
+        --color-shadow: rgba(0, 0, 0, 0.4);
+        --color-on-primary: #0F172A;
+        --color-focus-ring: rgba(45, 212, 191, 0.35);
+        --color-rating: #FBBF24;
+        --color-accent-bg-hover: #115E59;
+        --color-primary-hover: #5EEAD4;
+        --color-success: #4ADE80;
+        --color-danger: #FB7185;
+    }
+}
+
+/* product-------------------------------------- */
+/* صفحه امون حالت افقی نگیره */
+/* img {
+    display: block;
+    max-width: 100%;
+} */

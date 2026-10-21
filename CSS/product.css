@@ -1,0 +1,227 @@
+/* Product details and reviews */
+/* محصول ستونی زیر هم نشون داده بشه */
+.product__thumb {
+
+    width: 72px;
+    height: 72px;
+
+    cursor: pointer;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+}
+
+.product__gallery {
+    display: flex;
+    gap: 16px;
+
+}
+
+.product__image {
+    flex: 1;
+    min-width: 0;
+    background-color: #FFFFFF;
+    border: 1px solid var(--color-border);
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.product__img {
+    height: 400px;
+    object-fit: contain;
+    /* margin-right:auto; */
+    /* border-radius:32px;
+    border: 2px solid var(--color-border); */
+
+}
+
+.product__thumbs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.product {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.product__gallery,
+.product__info {
+    flex: 1;
+    min-width: 0;
+}
+
+.product__info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.product__buy {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    margin-top: 0;
+}
+
+
+.product__rating {
+    font-family: vazir400;
+    font-size: 13px;
+}
+
+.product__stars {
+    color: var(--color-rating);
+}
+
+.product__rating-text {
+    color: var(--color-text-muted);
+}
+
+.product__description {
+
+    font-family: vazir400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--color-text-muted);
+}
+
+.product__price {
+    font-family: vazir700;
+    font-size: 18px;
+    color: var(--color-text);
+}
+
+.product__button {
+    color: #FFFFFF;
+    background-color: var(--color-primary);
+    font-family: vazir600;
+    font-size: 12px;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 12px;
+    cursor: pointer;
+}
+
+.product__button:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.product__stock {
+    font-family: vazir600;
+    font-size: 13px;
+    color: var(--color-success);
+}
+
+.reviews__title {
+    margin-bottom: 16px;
+}
+
+.reviews {
+    margin-top: 48px;
+
+}
+
+.review__header1,
+.review__header2 {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 20px;
+    padding: 16px;
+    border-radius: 16px;
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0px 4px 16px var(--color-shadow);
+
+
+}
+
+.review__name {
+    font-family: vazir700;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.review__header2 {
+    margin-top: 12px;
+}
+
+.space {
+    font-size: small;
+    margin-right: 16px;
+    color: var(--color-rating);
+}
+
+.reviw-des {
+    font-family: vazir400;
+    font-size: 14px;
+    color: var(--color-text-muted);
+}
+
+
+
+/* نمایش عکس ها--------------------- */
+/* مخفی کردن radioها */
+.product__radio {
+    display: none;
+
+}
+
+/* پیش‌فرض: همه عکس‌های بزرگ مخفی */
+.product__img {
+    display: none;
+    width: 100%;
+}
+
+/* نمایش عکس مربوط به radio انتخاب‌شده */
+#gallery-1:checked~.product__image .product__img--1,
+#gallery-2:checked~.product__image .product__img--2,
+#gallery-3:checked~.product__image .product__img--3 {
+    display: block;
+
+}
+
+#gallery-1:checked~.product__thumbs .product__thumb--1,
+#gallery-2:checked~.product__thumbs .product__thumb--2,
+#gallery-3:checked~.product__thumbs .product__thumb--3 {
+    border: 3px solid var(--color-primary);
+
+}
+
+.wrapper {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+/* Responsive product-------------------- */
+
+@media(max-width: 768px) {
+    .product {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .product__gallery {
+        flex-direction: row;
+
+
+    }
+
+    .product__img {
+        height: 280px;
+    }
+
+    .page-header__title {
+        font-size: 24px;
+    }
+
+    .reviw-des {
+        line-height: 1.4;
+    }
+}
+

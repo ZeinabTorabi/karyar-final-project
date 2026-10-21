@@ -1,0 +1,281 @@
+
+.filter__title {
+    font-family: vazir700;
+    font-size: 18px;
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 16px;
+    margin-bottom: 1px;
+}
+
+
+.filter__group-title {
+    font-family: vazir600;
+    font-size: 14px;
+    color: var(--color-text);
+}
+
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    max-width: 1500px;
+    flex-shrink: 0;
+    gap: 24px;
+    padding: 20px 20px;
+    margin-top: 28px;
+    border-radius: 16px;
+    width: 240px;
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0px 4px 16px var(--color-shadow);
+    position: sticky;
+    top: 96px;
+
+}
+
+
+.filter__option {
+    font-family: vazir400;
+    font-size: 14px;
+    color: var(--color-text-muted);
+    margin: 12px auto;
+
+    /* تنظیمات مستطیل چک باکس */
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+
+}
+
+.filter__option:hover {
+    color: var(--color-text);
+}
+
+
+
+/* باعث مخفی شدن چک باکس میشه */
+input[class="filter__input"] {
+    position: absolute;
+    opacity: 0;
+    height: 1px;
+    width: 1px;
+
+}
+
+/* ظاهر چک باکس  رو به دلخواه تغییر میدیم*/
+.filter__box {
+    height: 20px;
+    width: 20px;
+    border: 2px solid var(--color-border-control);
+    border-radius: 6px;
+    background-color: var(--color-surface);
+    flex-shrink: 0;
+    position: relative;
+}
+
+.filter__box:hover {
+    border-color: var(--color-text-muted);
+}
+
+/* نمایش علامت تیک*/
+.filter__box::after {
+    content: "";
+    display: none;
+    height: 10px;
+    width: 6px;
+    border-right: 2px solid var(--color-surface);
+    border-bottom: 2px solid var(--color-surface);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0px;
+    left: 4px;
+}
+
+/* با کلیک روی متن یا کادر باید سبز بشه و با کلیک دوباره برگرده */
+input:checked+.filter__box {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+
+}
+
+/* نماش علامت تیک */
+input:checked+.filter__box::after {
+    display: block;
+}
+
+input:focus-visible+.filter__box {
+    box-shadow: 0px 0px 0px 3px var(--color-focus-ring);
+
+}
+
+/* محدوده قیمت */
+.filter__groupp {
+    border-top: 1px solid var(--color-border);
+    padding-top: 13px;
+}
+
+/*رادیو باکس-----------*/
+.filter__box--radio {
+    border-radius: 100%;
+    border-color: var(--color-border-control);
+}
+
+
+input:checked+.filter__box--radio {
+    background-color: var(--color-surface);
+}
+
+.filter__box--radio::after {
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    background-color: var(--color-primary);
+    border: 0;
+    transform: none;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+
+/*---Search Section--- */
+
+.catalog {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 45px 24px;
+    gap: 24px;
+    max-width: 1500px;
+
+}
+
+.products {
+    flex: 1;
+    min-width: 0;
+}
+
+.products__search {
+    display: flex;
+    width: 100%;
+    font-family: vazir400;
+    font-size: 15px;
+    color: var(--color-text);
+    padding: 13px;
+    margin: 27px 0px;
+    border: 1px solid var(--color-border);
+    border-radius: 15px;
+
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0px 3px 16px var(--color-shadow);
+
+}
+
+.products__search:focus {
+    outline: none;
+    border-color: var(--color-text-muted);
+
+}
+
+.products__search::placeholder{
+    text-align: right;
+}
+
+.products__bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    font-family: vazir400;
+    font-size: 14px;
+    color: var(--color-text-muted);
+}
+
+/*---Product Card---*/
+
+.link-a{
+    text-decoration: none;
+}
+.products__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.product-card {
+    box-shadow: 0px 3px 16px var(--color-shadow);
+    border-radius: 16px;
+
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+
+
+}
+
+.product-card__img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+}
+
+
+
+/* استایل متن محصولات ------------------*/
+.product-card__body {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.product-card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-card__badge {
+    font-family: vazir600;
+    background-color: var(--color-accent-bg);
+    color: var(--color-primary);
+    border-radius: 13px;
+    border: none;
+    align-self: flex-start;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 5px;
+
+
+}
+
+.product-card__title,
+.product-card__price {
+    font-family: vazir700;
+    font-size: 14px;
+    color: var(--color-text);
+    line-height: 1.2;
+}
+
+.product-card__rating {
+    font-family: vazir400;
+    font-size: 14px;
+    color: var(--color-rating);
+}
+
+
+/* Responsive catalog */
+@media(max-width: 768px) {
+    .products__list {
+        grid-template-columns: 1fr;
+    }
+
+    .filter {
+        display: none;
+    }
+}
+
