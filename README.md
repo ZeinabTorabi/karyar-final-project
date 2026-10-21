@@ -29,8 +29,7 @@ This project is a multi-page Persian e-commerce website developed as the final p
 ## Project Structure
 
 ```text
-Final Project – Zeinab Torabi/
-└── store/
+ store/
     ├── index.html
     ├── product.html
     ├── register.html
