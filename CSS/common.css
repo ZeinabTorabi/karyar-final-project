@@ -49,9 +49,19 @@
 }
 
 body {
+    /* برای اینکه فوتر پایین صفحه بمونه */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /*  */
     background-color: var(--color-bg);
     font-family: vazir400;
     color: var(--color-text);
+}
+
+/* اینجوری main فضای باقی‌مونده رو می‌گیره و فوتر همیشه اخر صفحه می‌مونه */
+main {
+    flex: 1;
 }
 
 
