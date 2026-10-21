@@ -49,23 +49,19 @@
 }
 
 body {
-    /* برای اینکه فوتر پایین صفحه بمونه */
+    
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /*  */
     background-color: var(--color-bg);
     font-family: vazir400;
     color: var(--color-text);
 }
 
-/* اینجوری main فضای باقی‌مونده رو می‌گیره و فوتر همیشه اخر صفحه می‌مونه */
 main {
     flex: 1;
 }
 
-
-/* هدر سایت-------------------------------------------- */
 .navbar {
     width: 100%;
     height: 74px;
@@ -78,8 +74,6 @@ main {
     position: sticky;
     top: 0;
     z-index: 100;
-
-
 }
 
 .navbar__menu {
@@ -139,7 +133,6 @@ main {
     text-align: center;
     padding: 13px 17px;
     text-decoration: none;
-
     cursor: pointer;
 }
 
@@ -152,8 +145,7 @@ main {
 }
 
 
-/* page-header__title---------------------------- */
-
+/* page-header__title*/
 .page-header {
     display: flex;
     flex-direction: column;
@@ -226,7 +218,7 @@ main {
     color: rgba(255, 255, 255, 0.63);
 }
 
-/* Responsive----------------------------------------- */
+/* Responsive */
 
 @media(max-width: 768px) {
     .footer_navbar {
@@ -268,7 +260,7 @@ main {
 }
 
 
-/* dark mode------------------- */
+/* dark mode */
 @media (prefers-color-scheme: dark) {
     :root {
         --color-bg: #0F172A;
@@ -290,10 +282,3 @@ main {
         --color-danger: #FB7185;
     }
 }
-
-/* product-------------------------------------- */
-/* صفحه امون حالت افقی نگیره */
-/* img {
-    display: block;
-    max-width: 100%;
-} */

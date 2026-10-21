@@ -1,32 +1,25 @@
 /* Registration page */
-/* page register----------------------------- */
 
 .page {
     display: flex;
     justify-content: center;
     padding: 24px 48px;
-
 }
 
 .form {
     display: flex;
     flex-direction: column;
     gap: 16px;
-
-
 }
 
 .form-card {
-
     border-bottom: 1px solid var(--color-border);
     box-shadow: 0px 4px 16px var(--color-shadow);
     background-color: var(--color-surface);
     border: 1px solid var(--color-border);
     border-radius: 16px;
     padding: 24px;
-
     max-width: 420px;
-
 }
 
 .form-container {
@@ -42,7 +35,6 @@
     flex-direction: column;
     align-items: stretch;
     gap: 8px;
-
 }
 
 .form-control {
@@ -68,7 +60,6 @@
     outline: none;
     border-color: var(--color-primary);
     box-shadow: 0 0 0 3px var(--color-focus-ring);
-
 }
 
 .form-title {
@@ -100,8 +91,6 @@
     flex-direction: row;
     justify-content: center;
     gap: 8px;
-
-
 }
 
 .btn {
@@ -136,7 +125,7 @@
 }
 
 
-/* Responsive register-------------------------- */
+/* Responsive register*/
 @media(max-width:480px) {
     .form-card {
         width: 100%;

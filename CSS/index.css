@@ -31,7 +31,6 @@
     box-shadow: 0px 4px 16px var(--color-shadow);
     position: sticky;
     top: 96px;
-
 }
 
 
@@ -54,15 +53,12 @@
     color: var(--color-text);
 }
 
-
-
 /* باعث مخفی شدن چک باکس میشه */
 input[class="filter__input"] {
     position: absolute;
     opacity: 0;
     height: 1px;
     width: 1px;
-
 }
 
 /* ظاهر چک باکس  رو به دلخواه تغییر میدیم*/
@@ -80,7 +76,7 @@ input[class="filter__input"] {
     border-color: var(--color-text-muted);
 }
 
-/* نمایش علامت تیک*/
+
 .filter__box::after {
     content: "";
     display: none;
@@ -94,30 +90,26 @@ input[class="filter__input"] {
     left: 4px;
 }
 
-/* با کلیک روی متن یا کادر باید سبز بشه و با کلیک دوباره برگرده */
 input:checked+.filter__box {
     background-color: var(--color-primary);
     border-color: var(--color-primary);
 
 }
 
-/* نماش علامت تیک */
 input:checked+.filter__box::after {
     display: block;
 }
 
 input:focus-visible+.filter__box {
     box-shadow: 0px 0px 0px 3px var(--color-focus-ring);
-
 }
 
-/* محدوده قیمت */
 .filter__groupp {
     border-top: 1px solid var(--color-border);
     padding-top: 13px;
 }
 
-/*رادیو باکس-----------*/
+/*رادیو باکس*/
 .filter__box--radio {
     border-radius: 100%;
     border-color: var(--color-border-control);
@@ -210,8 +202,6 @@ input:checked+.filter__box--radio {
     background-color: var(--color-surface);
     border: 1px solid var(--color-border);
     overflow: hidden;
-
-
 }
 
 .product-card__img {
@@ -223,8 +213,6 @@ input:checked+.filter__box--radio {
 }
 
 
-
-/* استایل متن محصولات ------------------*/
 .product-card__body {
     display: flex;
     flex-direction: column;

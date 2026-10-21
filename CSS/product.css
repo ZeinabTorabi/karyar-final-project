@@ -1,10 +1,7 @@
 /* Product details and reviews */
-/* محصول ستونی زیر هم نشون داده بشه */
 .product__thumb {
-
     width: 72px;
     height: 72px;
-
     cursor: pointer;
     object-fit: cover;
     border-radius: 12px;
@@ -29,10 +26,6 @@
 .product__img {
     height: 400px;
     object-fit: contain;
-    /* margin-right:auto; */
-    /* border-radius:32px;
-    border: 2px solid var(--color-border); */
-
 }
 
 .product__thumbs {
@@ -136,8 +129,6 @@
     background-color: var(--color-surface);
     border-bottom: 1px solid var(--color-border);
     box-shadow: 0px 4px 16px var(--color-shadow);
-
-
 }
 
 .review__name {
@@ -162,9 +153,6 @@
     color: var(--color-text-muted);
 }
 
-
-
-/* نمایش عکس ها--------------------- */
 /* مخفی کردن radioها */
 .product__radio {
     display: none;
