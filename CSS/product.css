@@ -153,19 +153,17 @@
     color: var(--color-text-muted);
 }
 
-/* مخفی کردن radioها */
+
 .product__radio {
     display: none;
 
 }
 
-/* پیش‌فرض: همه عکس‌های بزرگ مخفی */
 .product__img {
     display: none;
     width: 100%;
 }
 
-/* نمایش عکس مربوط به radio انتخاب‌شده */
 #gallery-1:checked~.product__image .product__img--1,
 #gallery-2:checked~.product__image .product__img--2,
 #gallery-3:checked~.product__image .product__img--3 {
@@ -186,7 +184,6 @@
     padding: 24px;
 }
 
-/* Responsive product-------------------- */
 
 @media(max-width: 768px) {
     .product {
