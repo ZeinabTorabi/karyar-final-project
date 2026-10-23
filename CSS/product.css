@@ -60,6 +60,19 @@
     margin-top: 0;
 }
 
+.product-card__badge {
+    font-family: vazir600;
+    background-color: var(--color-accent-bg);
+    color: var(--color-primary);
+    border-radius: 13px;
+    border: none;
+    align-self: flex-start;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 5px;
+
+
+}
 
 .product__rating {
     font-family: vazir400;
