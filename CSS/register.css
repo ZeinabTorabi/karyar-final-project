@@ -105,7 +105,7 @@
 
 .btn-primary {
     background-color: var(--color-primary);
-    color: var(--color-on-primary);
+    color: white;
 }
 
 .btn-secondary {
