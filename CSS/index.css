@@ -259,6 +259,10 @@ input:checked+.filter__box--radio {
     .filter {
         display: none;
     }
+    
+    .catalog {
+    padding: 0 32px;
+    }
 }
 
 

@@ -219,6 +219,9 @@ main {
         text-align: center;
         gap: 24px;
     }
+    .page-header {
+        padding: 0 32px;
+    }
 }
 
 @media(max-width: 640px) {
