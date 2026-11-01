@@ -191,7 +191,6 @@ input:checked+.filter__box--radio {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
-    flex:1;
 }
 
 .product-card {
@@ -256,7 +255,6 @@ input:checked+.filter__box--radio {
 @media(max-width: 768px) {
     .products__list {
         grid-template-columns: 1fr;
-        display:flex; flex-wrap:wrap; gap:16px
         
     }
 
