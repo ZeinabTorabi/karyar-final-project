@@ -52,7 +52,7 @@
     color: var(--color-text);
 }
 
-/* check hidden */
+
 input[class="filter__input"] {
     position: absolute;
     opacity: 0;
@@ -182,7 +182,7 @@ input:checked+.filter__box--radio {
     color: var(--color-text-muted);
 }
 
-/*---Product Card---*/
+
 
 .link-a{
     text-decoration: none;
