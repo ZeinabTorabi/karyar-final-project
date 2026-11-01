@@ -133,7 +133,9 @@ input:checked+.filter__box--radio {
 .catalog {
     display: flex;
     align-items: flex-start;
-    margin: 0 45px 24px;
+    margin: 0 auto 24px;
+    padding: 0 24px;
+    width:100%;
     gap: 24px;
     max-width: 1500px;
 
@@ -189,6 +191,7 @@ input:checked+.filter__box--radio {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
+    flex:1;
 }
 
 .product-card {
@@ -253,6 +256,8 @@ input:checked+.filter__box--radio {
 @media(max-width: 768px) {
     .products__list {
         grid-template-columns: 1fr;
+        display:flex; flex-wrap:wrap; gap:16px
+        
     }
 
     .filter {
