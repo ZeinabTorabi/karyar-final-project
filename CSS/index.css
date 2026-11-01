@@ -102,11 +102,10 @@ input:focus-visible+.filter__box {
     box-shadow: 0px 0px 0px 3px var(--color-focus-ring);
 }
 
-.filter__groupp {
+.filter__group {
     border-top: 1px solid var(--color-border);
-    padding-top: 13px;
+    padding-top: 16px;
 }
-
 
 .filter__box--radio {
     border-radius: 100%;
