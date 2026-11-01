@@ -255,7 +255,6 @@ input:checked+.filter__box--radio {
 @media(max-width: 768px) {
     .products__list {
         grid-template-columns: 1fr;
-        
     }
 
     .filter {
