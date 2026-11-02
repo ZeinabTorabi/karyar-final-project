@@ -168,10 +168,6 @@ input:checked+.filter__box--radio {
 
 }
 
-.products__search::placeholder{
-    text-align: right;
-}
-
 .products__bar {
     display: flex;
     justify-content: space-between;
