@@ -80,8 +80,8 @@ input[class="filter__input"] {
     display: none;
     height: 10px;
     width: 6px;
-    border-right: 2px solid var(--color-surface);
-    border-bottom: 2px solid var(--color-surface);
+    border-right: 3px solid var(--color-surface);
+    border-bottom: 3px solid var(--color-surface);
     transform: rotate(45deg);
     position: absolute;
     top: 0px;
