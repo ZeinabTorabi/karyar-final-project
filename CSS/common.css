@@ -20,27 +20,37 @@
 }
 
 
+/* @font-face {
+    font-family: vazirmatn;
+    src: url(./fonts/Vazirmatn-Regular.woff2);
+    src: url(./fonts/Vazirmatn-SemiBold.woff2);
+    src: url(./fonts/Vazirmatn-Bold.woff2);
+    src: url(./fonts/Vazirmatn-ExtraBold.woff2);
+    font-display: swap
+} */
+
+
 @font-face {
     font-family: vazir400;
-    src: url(./fonts/vazirmatn-v33.003/fonts/webfonts/Vazirmatn-Regular.woff2);
+    src: url(./fonts/webfonts/Vazirmatn-Regular.woff2);
     font-display: swap
 }
 
 @font-face {
     font-family: vazir600;
-    src: url(./fonts/vazirmatn-v33.003/fonts/webfonts/Vazirmatn-SemiBold.woff2);
+    src: url(./fonts/webfonts/Vazirmatn-SemiBold.woff2);
     font-display: swap
 }
 
 @font-face {
     font-family: vazir700;
-    src: url(./fonts/vazirmatn-v33.003/fonts/webfonts/Vazirmatn-Bold.woff2);
+    src: url(./fonts/webfonts/Vazirmatn-Bold.woff2);
     font-display: swap
 }
 
 @font-face {
     font-family: vazir800;
-    src: url(./fonts/vazirmatn-v33.003/fonts/webfonts/Vazirmatn-ExtraBold.woff2);
+    src: url(./fonts/webfonts/Vazirmatn-ExtraBold.woff2);
     font-display: swap
 }
 
@@ -49,7 +59,7 @@
 }
 
 body {
-    
+
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -70,7 +80,7 @@ main {
     font-family: vazir400;
     border-bottom: 1px solid var(--color-border);
     box-shadow: 0px 4px 16px var(--color-shadow);
-    
+
     position: sticky;
     top: 0;
     z-index: 100;
@@ -219,6 +229,7 @@ main {
         text-align: center;
         gap: 24px;
     }
+
     .page-header {
         padding: 0 32px;
     }
@@ -232,7 +243,7 @@ main {
 
     .container {
         flex-wrap: wrap;
-        row-gap:15px;
+        row-gap: 15px;
     }
 
     .loginlink {
@@ -254,6 +265,7 @@ main {
     :root {
         --color-bg: #0F172A;
         --color-surface: #1E293B;
+        --color-surface-image:#ffff;
         --color-text: #E2E8F0;
         --color-text-muted: #94A3B8;
         --color-primary: #2DD4BF;
